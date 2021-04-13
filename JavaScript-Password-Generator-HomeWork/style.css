@@ -1,20 +1,27 @@
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
-html,
 body,
 .wrapper {
   height: 100%;
   margin: 0;
-  padding: 0;
+  padding: black;
+  border-color: black;
+  border: 10px;
 }
 
 body {
+  background-color: #da40c0;
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  color: rgb(17, 15, 15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  min-height: 100vh;
+  min-width: auto;
+
 }
 
 .wrapper {
@@ -27,7 +34,7 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: hsl(207, 36%, 38%);
 }
 
 .card {
@@ -42,7 +49,7 @@ header {
   padding: 30px 40px;
 }
 
-.card-header::after {
+.card-header: {
   content: " ";
   display: block;
   width: 100%;
@@ -58,27 +65,13 @@ header {
   text-align: center;
 }
 
-.card-footer::before {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-}
-
-.card-footer::after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: rgb(171, 6, 171);
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
-  color: hsl(0, 0%, 100%);
+  color: hsl(0, 18%, 3%);
   display: inline-block;
   font-size: 22px;
   line-height: 22px;

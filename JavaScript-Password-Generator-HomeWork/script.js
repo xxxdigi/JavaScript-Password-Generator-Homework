@@ -1,13 +1,11 @@
 var generateBtn = document.querySelector("#generate");
-
 var selectLowerCase;
 var selectUpperCase;
 var selectSpecial;
-
 var plength = 0
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var number = "1234567890";
+var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numbers = "1234567890";
 var specialCharacter = "!#$@%^&*()_+=-':;<,>.?/~`";
 var userPassword = "";
 var passwordGroup = "";
@@ -33,9 +31,9 @@ var selectUpperCase = confirm("Use upper case letters?");
 var selectNumber = confirm("Use number?");
 var selectSpecial = confirm("Use special characters?");
 
-geratePassword();
+generatePassword();
 
-document.gerElementbyId("password").innerHTML = userPassword;
+document.getElementById("password").innerHTML = userPassword;
 function generatePassword() {
   if (selectLowerCase) {
   passwordGroup += lowerCase;
@@ -61,6 +59,7 @@ var copy = document.querySelector("#copy");
 copy.addEventListener("click", function () {
   copyPassword();
 });
+
 function copyPassword() {
     document.getElementById("password").select();
     document.execCommand("Copy");
